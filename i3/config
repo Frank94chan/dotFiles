@@ -156,7 +156,7 @@ bar {
         status_command i3blocks -c /home/frank/.config/i3/i3blocks.conf
 	mode hide
 	hidden_state hide
-	modifier Mod4
+	modifier Mod1
 	position top
 	colors {
     		separator #268bd2
@@ -202,7 +202,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /home/frank/MyScript/toggletouchpad.sh # toggle touchpad
+bindsym XF86TouchpadToggle exec /home/frank/bin/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -212,8 +212,8 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Autostart Applicantions
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id gnome-terminal
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 exec --no-startup-id fcitx
 exec --no-startup-id feh --bg-fill /home/frank/Pictures/Wallpapers/wallpaper.jpg
 
@@ -240,4 +240,6 @@ for_window [class="^Fcitx-config-gtk3$"] floating enable
 for_window [class="^mGBA$"] floating enable
 for_window [class="^Lxappearance$"] floating enable
 for_window [class="^Fceux$"] floating enable
-
+for_window [title="^Terminator Preferences$"] floating enable
+for_window [class="^Arandr$"] floating enable
+for_window [class="^Blueman"] floating enable
