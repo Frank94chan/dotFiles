@@ -30,7 +30,7 @@ font pango:roboto mono regular 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec rofi-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -154,9 +154,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3blocks -c /home/frank/.config/i3/i3blocks.conf
-	mode hide
-	hidden_state hide
-	modifier Mod1
+	mode dock
+	hidden_state show
+	modifier Mod4
 	position top
 	colors {
     		separator #268bd2
@@ -216,6 +216,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id fcitx
 exec --no-startup-id feh --bg-fill /home/frank/Pictures/Wallpapers/wallpaper.jpg
+exec --no-startup-id rofi-sensible-terminal
 
 # Screenshot
 bindsym --release Print exec scrot -q100 -s $HOME/Pictures/Screenshots/Screenshot-`date +%Y-%m-%d_%H-%M-%S`.png
@@ -243,3 +244,17 @@ for_window [class="^Fceux$"] floating enable
 for_window [title="^Terminator Preferences$"] floating enable
 for_window [class="^Arandr$"] floating enable
 for_window [class="^Blueman"] floating enable
+for_window [class="^net-minecraft-launcher-Main"] floating enable
+for_window [window_type="popup_menu"] floating enable
+for_window [window_type="splash"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="tooltip"] floating enable
+
+# Automatically putting clients on specific workspaces
+assign [class="google-chrome"] 2
+assign [class="Eclipse"] 4
+assign [class="Thunar"] 3
+assign [class="Spotify"] 0
+assign [title="Telegram Web"] 9
+
+
