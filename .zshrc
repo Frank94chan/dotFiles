@@ -50,12 +50,20 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+<<<<<<< HEAD
 plugins=(archlinux history adb sudo systemd git compleat common-aliases encode64)
 
 # User configuration
 
 export PATH="$HOME/.node_modules/bin:$HOME/.local/bin:$PATH"
 export EDITOR=vim
+=======
+plugins=(archlinux adb compleat history common-aliases command-not-found encode64 python sudo systemd)
+
+# User configuration
+export EDITOR=vim
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+>>>>>>> 3adc214e3cb3454414fed9198c753a346a85278b
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
