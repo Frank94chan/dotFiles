@@ -7,6 +7,7 @@
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -49,11 +50,12 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux adb compleat history common-aliases command-not-found encode64 pyenv python sudo systemd encode64)
+plugins=(archlinux history adb sudo systemd git compleat common-aliases encode64)
 
 # User configuration
 
-export PATH="$HOME/.node_modules/bin:$PATH"
+export PATH="$HOME/.node_modules/bin:$HOME/.local/bin:$PATH"
+export EDITOR=vim
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -81,5 +83,5 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"

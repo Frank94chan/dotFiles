@@ -1,0 +1,81 @@
+!! Perl Extensions
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,tabbed
+URxvt.url-select.launcher:  google-chrome-stable
+URxvt.url-select.underline: true
+URxvt.matcher.button:       1
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 3
+URxvt.tabbed.tab-bg: 0
+
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+!
+! ! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+!
+! ! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+
+!! Font Settings
+URxvt.font: xft:Roboto Mono for Powerline:size=10
+URxvt.letterSpace: 0
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.autohint:   false
+Xft.lcdfilter:  lcddefault
+
+
+!! ScrollBar
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: rxvt
+
+
+!! Color Theme
+! special
+*.foreground:   #66ff66
+*.background:   #101010
+*.cursorColor:  #66ff66
+
+! black
+*.color0:       #1c1c1c
+*.color8:       #4d4d4d
+
+! red
+*.color1:       #d81860
+*.color9:       #f00060
+
+! green
+*.color2:       #60ff60
+*.color10:      #70ff70
+
+! yellow
+*.color3:       #f9fd75
+*.color11:      #f9fd80
+
+! blue
+*.color4:       #4695c8
+*.color12:      #5a9dc8
+
+! magenta
+*.color5:       #a78edb
+*.color13:      #b29fdb
+
+! cyan
+*.color6:       #43afce
+*.color14:      #69b8ce
+
+! white
+*.color7:       #f3ebe2
+*.color15:      #eeeeee
